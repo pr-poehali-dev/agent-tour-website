@@ -120,12 +120,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="bg-gradient-to-r from-primary to-secondary p-2 rounded-xl">
-                <Icon name="Plane" className="text-white" size={28} />
-              </div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                AGENT_TOUR
-              </h1>
+              <img 
+                src="https://cdn.poehali.dev/files/logoza.ru.png" 
+                alt="AGENT_TOUR" 
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <a href="#tours" className="text-foreground hover:text-primary transition-colors font-semibold">
@@ -482,8 +481,11 @@ const Index = () => {
       <footer className="bg-gradient-to-r from-primary to-secondary text-white py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Icon name="Plane" size={24} />
-            <h4 className="text-2xl font-bold">AGENT_TOUR</h4>
+            <img 
+              src="https://cdn.poehali.dev/files/logoza.ru.png" 
+              alt="AGENT_TOUR" 
+              className="h-16 w-auto object-contain brightness-0 invert"
+            />
           </div>
           <p className="text-white/80 mb-4">Путешествуйте с удовольствием</p>
           <p className="text-sm text-white/60">© 2024 AGENT_TOUR. Все права защищены</p>
