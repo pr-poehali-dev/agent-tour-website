@@ -120,11 +120,12 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img 
-                src="https://cdn.poehali.dev/files/logoza.ru.png" 
-                alt="AGENT_TOUR" 
-                className="h-12 w-auto object-contain"
-              />
+              <div className="bg-gradient-to-r from-primary to-secondary p-2 rounded-xl">
+                <Icon name="Plane" className="text-white" size={28} />
+              </div>
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                AGENT_TOUR
+              </h1>
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <a href="#tours" className="text-foreground hover:text-primary transition-colors font-semibold">
@@ -132,6 +133,9 @@ const Index = () => {
               </a>
               <a href="#about" className="text-foreground hover:text-primary transition-colors font-semibold">
                 О нас
+              </a>
+              <a href="#team" className="text-foreground hover:text-primary transition-colors font-semibold">
+                Команда
               </a>
               <a href="#contacts" className="text-foreground hover:text-primary transition-colors font-semibold">
                 Контакты
@@ -373,7 +377,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl font-bold text-center mb-8">О нас</h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
               <Card className="text-center border-2 hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -414,7 +418,82 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contacts" className="py-16 px-4">
+      <section id="team" className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold mb-4">Наша команда</h3>
+            <p className="text-muted-foreground text-lg">Профессионалы, которые сделают ваше путешествие незабываемым</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            <Card className="text-center border-2 hover:shadow-xl transition-all hover:-translate-y-2">
+              <CardHeader>
+                <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
+                  <Icon name="User" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Анна Смирнова</CardTitle>
+                <CardDescription>Директор агентства</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">12 лет в туризме</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 hover:shadow-xl transition-all hover:-translate-y-2">
+              <CardHeader>
+                <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center mb-4">
+                  <Icon name="User" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Дмитрий Волков</CardTitle>
+                <CardDescription>Менеджер по турам</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Эксперт по Европе</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 hover:shadow-xl transition-all hover:-translate-y-2">
+              <CardHeader>
+                <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center mb-4">
+                  <Icon name="User" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Елена Петрова</CardTitle>
+                <CardDescription>Специалист по визам</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Оформление за 3 дня</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 hover:shadow-xl transition-all hover:-translate-y-2">
+              <CardHeader>
+                <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
+                  <Icon name="User" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Игорь Козлов</CardTitle>
+                <CardDescription>Гид-экскурсовод</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Знает 40+ стран</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 hover:shadow-xl transition-all hover:-translate-y-2">
+              <CardHeader>
+                <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center mb-4">
+                  <Icon name="User" size={40} className="text-white" />
+                </div>
+                <CardTitle className="text-lg">Мария Новикова</CardTitle>
+                <CardDescription>Консультант</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">Помощь 24/7</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" className="py-16 px-4 bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="container mx-auto max-w-4xl">
           <h3 className="text-4xl font-bold text-center mb-8">Контакты</h3>
           <Card className="border-2 shadow-lg">
@@ -481,11 +560,8 @@ const Index = () => {
       <footer className="bg-gradient-to-r from-primary to-secondary text-white py-8 px-4">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img 
-              src="https://cdn.poehali.dev/files/logoza.ru.png" 
-              alt="AGENT_TOUR" 
-              className="h-16 w-auto object-contain brightness-0 invert"
-            />
+            <Icon name="Plane" size={24} />
+            <h4 className="text-2xl font-bold">AGENT_TOUR</h4>
           </div>
           <p className="text-white/80 mb-4">Путешествуйте с удовольствием</p>
           <p className="text-sm text-white/60">© 2024 AGENT_TOUR. Все права защищены</p>
